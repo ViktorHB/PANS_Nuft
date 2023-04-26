@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PANS.UI.Questions.OneAnswerQuestionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition  Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Margin="10"  
+                   Grid.Row="0" 
+                   FontSize="20"
+                   Text="{Binding Path=Question, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+        <StackPanel 
+            Margin="0 25 0 0"
+            Grid.Row="1">
+            <RadioButton 
+                IsChecked="{Binding Path=IsAnswer1Checked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                Margin="10" GroupName="answers"
+                Content="{Binding Path=Answer1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <RadioButton
+                IsChecked="{Binding Path=IsAnswer2Checked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                 Margin="10" GroupName="answers" 
+                Content="{Binding Path=Answer2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <RadioButton 
+                IsChecked="{Binding Path=IsAnswer3Checked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                 Margin="10" GroupName="answers" 
+                Content="{Binding Path=Answer3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="PANS.UI.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Lab3" Height="400" Width="382">
+    <StackPanel>
+        <TextBlock Text="Greetings!" FontSize="25" HorizontalAlignment="Center"/>
+        <TextBlock Text="This is technology test!" FontSize="20" HorizontalAlignment="Center"/>
+        <TextBlock Text="There are 6 question" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="2 question of each type" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="First type is one answer question" Foreground="Blue" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="Correct answer equals 1 point" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="Second type is semi answer question" Foreground="Blue" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="You need to chose couple correct options" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="For each correct answer you will earn 0.5 point" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="Last type is one test question" Foreground="Blue" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="You need to write correct answer" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="Correct answer for this question equals 1 point" FontSize="14" HorizontalAlignment="Center"/>
+        <TextBlock Text="Good Luck Big Boy" FontSize="25" HorizontalAlignment="Center"/>
+
+        <Button Content="Start quiz" Height="50" Width="120" Margin="30" Foreground="Red" FontSize="26" Click="Button_Click"></Button>
+
+    </StackPanel>
+</Window>

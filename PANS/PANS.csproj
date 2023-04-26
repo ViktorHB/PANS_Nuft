@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF1EF9A9-53F3-453A-816E-023EB3BCD7DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PANS</RootNamespace>
+    <AssemblyName>PANS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Sqlite, Version=7.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.7.0.2\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="ScottPlot, Version=4.1.60.0, Culture=neutral, PublicKeyToken=86698dc10387c39e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScottPlot.4.1.60\lib\net462\ScottPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="ScottPlot.WPF, Version=4.1.60.0, Culture=neutral, PublicKeyToken=e53b06131e34a3aa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScottPlot.WPF.4.1.60\lib\net472\ScottPlot.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.1.2.1721, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.2.1.2\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.7.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Entities\GraphPoint.cs" />
+    <Compile Include="Entities\KnowledgeElement.cs" />
+    <Compile Include="Entities\LearningElement.cs" />
+    <Compile Include="Entities\QuizData.cs" />
+    <Compile Include="Entities\TechData.cs" />
+    <Compile Include="Entities\UserData.cs" />
+    <Compile Include="Services\DbService.cs" />
+    <Compile Include="Services\IConnectionString.cs" />
+    <Compile Include="Services\IDbService.cs" />
+    <Compile Include="Services\IQuizDataRepository.cs" />
+    <Compile Include="Services\IQuizTableSqliteDataAccess.cs" />
+    <Compile Include="Services\ISHA1Encryptor.cs" />
+    <Compile Include="Services\ITechTableSqliteDataAccess.cs" />
+    <Compile Include="Services\ITechDataRepository.cs" />
+    <Compile Include="Services\KnowledgeElementTableSqliteDataAccess.cs" />
+    <Compile Include="Services\LearningElementTableSqliteDataAccess.cs" />
+    <Compile Include="Services\QuizDataRepository.cs" />
+    <Compile Include="Services\QuizTableSqliteDataAccess.cs" />
+    <Compile Include="Services\SHA1Encryptor.cs" />
+    <Compile Include="Services\TechTableSqliteDataAccess.cs" />
+    <Compile Include="Services\TechDataRepository.cs" />
+    <Compile Include="Services\UserTableSqliteDataAccess.cs" />
+    <Compile Include="UI\DataBaseControl.xaml.cs">
+      <DependentUpon>DataBaseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DataBaseControlViewModel.cs" />
+    <Compile Include="UI\FunctionGraphControl.xaml.cs">
+      <DependentUpon>FunctionGraphControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FunctionGraphControlViewModel.cs" />
+    <Compile Include="UI\ILab2WindowViewModel.cs" />
+    <Compile Include="UI\ILab3WindowViewModel.cs" />
+    <Compile Include="UI\InteractivityControl.xaml.cs">
+      <DependentUpon>InteractivityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InteractivityControlViewModel.cs" />
+    <Compile Include="UI\Lab2Window.xaml.cs">
+      <DependentUpon>Lab2Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Lab2WindowViewModel.cs" />
+    <Compile Include="UI\Lab3Window.xaml.cs">
+      <DependentUpon>Lab3Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Lab3WindowViewModel.cs" />
+    <Compile Include="UI\Questions\OneAnswerQuestionControl.xaml.cs">
+      <DependentUpon>OneAnswerQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Questions\OneAnswerQuestionControlViewModel.cs" />
+    <Compile Include="UI\Questions\QuestionControlFactory.cs" />
+    <Compile Include="UI\Questions\QuestionControlViewModelBase.cs" />
+    <Compile Include="UI\Questions\SemiAnswerQuestionControl.xaml.cs">
+      <DependentUpon>SemiAnswerQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Questions\SemiAnswerQuestionControlViewModel.cs" />
+    <Compile Include="UI\Questions\TextAnswerQuestionControl.xaml.cs">
+      <DependentUpon>TextAnswerQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Questions\TextAnswerQuestionControlViewModel.cs" />
+    <Compile Include="UI\QuizWindow.xaml.cs">
+      <DependentUpon>QuizWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModelBase.cs" />
+    <Page Include="AboutCourseAuthorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutCourseAuthorWindow.xaml.cs">
+      <DependentUpon>AboutCourseAuthorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UI\DataBaseControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\FunctionGraphControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\InteractivityControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Lab2Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Lab3Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Questions\OneAnswerQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Questions\SemiAnswerQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Questions\TextAnswerQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\QuizWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\WPF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\C-Sharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\UWP.png" />
+    <Resource Include="Assets\WCF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Java.png" />
+    <Resource Include="Assets\JavaScript.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="PANS.UI.FunctionGraphControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <WpfPlot x:Name="Plot" ></WpfPlot>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="1">
+            <TextBlock TextWrapping="Wrap"
+                       Width="100" 
+                       FontSize="20"
+                       Text="Please enter coordinates"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel 
+                    Orientation="Vertical">
+                    <TextBlock 
+                        FontSize="20"
+                        Text="X"/>
+                    <TextBox x:Name="X1" FontSize="16" Height="20" TextChanged="X1_OnTextChanged"/>
+                    <TextBox x:Name="X2" FontSize="16" Height="20" TextChanged="X2_OnTextChanged"/>
+                    <TextBox x:Name="X3" FontSize="16" Height="20" TextChanged="X3_OnTextChanged"/>
+                    <TextBox x:Name="X4" FontSize="16" Height="20" TextChanged="X4_OnTextChanged"/>
+                    <TextBox x:Name="X5" FontSize="16" Height="20" TextChanged="X5_OnTextChanged"/>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Orientation="Vertical">
+                    <TextBlock 
+                        FontSize="20"
+                        Text="Y"/>
+                    <TextBox x:Name="Y1" FontSize="16" Height="20" TextChanged="Y1_OnTextChanged"/>
+                    <TextBox x:Name="Y2" FontSize="16" Height="20" TextChanged="Y2_OnTextChanged"/>
+                    <TextBox x:Name="Y3" FontSize="16" Height="20" TextChanged="Y3_OnTextChanged"/>
+                    <TextBox x:Name="Y4" FontSize="16" Height="20" TextChanged="Y4_OnTextChanged"/>
+                    <TextBox x:Name="Y5" FontSize="16" Height="20" TextChanged="Y5_OnTextChanged"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
